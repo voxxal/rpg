@@ -7,23 +7,23 @@
   </head>
 
   <body>
-    <div id="startMenu">
-	  <h1>Soul RPG</h1>
-	  <div id="soul">
-      <p id="soulFluidCounter">0/10000 Soul Fluid</p>
-      <center>
-        <div id="soulFluidMeter">
-          <div id="soulFluid"></div>
-        </div>
-      </center>
-	  <h4><span id="souls">0</span> Souls</h4>
-	</div>
+    <div id="startMenu" class="tabContent">
+      <h1>Soul RPG</h1>
+      <div id="soul">
+        <p id="soulFluidCounter">0/10000 Soul Fluid</p>
+        <center>
+          <div id="soulFluidMeter">
+            <div id="soulFluid"></div>
+          </div>
+        </center>
+        <h4><span id="souls">0</span> Souls</h4>
+      </div>
       <div id="startButtons">
         <button onclick="startGame();">Start</button>
         <button>Upgrades</button>
       </div>
     </div>
-    <div id="game">
+    <div id="game" class="tabContent">
       <div id="playerBox">
         <div id="playerStats">
           <b id="playerName">Player</b>
@@ -33,14 +33,27 @@
           </p>
           <progress id="playerHpBar" class="hpBar" max="0" value="0"></progress>
         </div>
-
         <div id="playerButtons">
           <button id="fight">Fight</button>
+          <button id="inv">Inventory</button>
         </div>
+        <div id="fightBox"></div>
+        <div id="inventory"></div>
       </div>
-      <div id="enemyBox"></div>
-    </div>
+      <div id="enemyBox">
+        <div id="enemyStats">
+          <b id="enemyName">Player</b>
+          <p>Attack: <span id="enemyAtk">0</span></p>
+          <p>
+            Health: <span id="enemyHp">0</span>/<span id="enemyHpMax">0</span>
+          </p>
+          <progress id="enemyHpBar" class="hpBar" max="0" value="0"></progress>
+        </div>
 
-    <script type="text/javascript" src="game.js"></script>
+
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
   </body>
 </html>
